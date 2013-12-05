@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe UPS do
+vcr_options = { cassette_name: 'ups' }
+
+describe UPS, vcr: vcr_options do
   before :all do
-    VCR.use_cassette 'ups' do
-      @ups = UPS.new(ENV['LIEBERT_UPS_URI'])
-    end
+    @ups = UPS.new(ENV['LIEBERT_UPS_URI'])
   end
 
   it 'responds to input_amps' do
-    expect(@ups.input_amps).to eq "Input_amps\t16.5"
+    expect(@ups.input_amps).to eq "Input_amps\t16.4"
   end
 
   it 'responds to output_amps' do
-    expect(@ups.output_amps).to eq "Output_amps\t33.5"
+    expect(@ups.output_amps).to eq "Output_amps\t33.3"
   end
 
   it 'responds to battery_voltage' do
@@ -24,6 +24,6 @@ describe UPS do
   end
 
   it 'responds to all' do
-    expect(@ups.all).to eq "Input_amps\t16.5\nOutput_amps\t33.5\nBattery_voltage\t548.0\nCharge\t100.0\n"
+    expect(@ups.all).to eq "Input_amps\t16.4\nOutput_amps\t33.3\nBattery_voltage\t548.0\nCharge\t100.0\n"
   end
 end

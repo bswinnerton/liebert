@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe AirConditioner do
+vcr_options = { cassette_name: 'airconditioner' }
+
+describe AirConditioner, vcr: vcr_options do
   before :all do
-    VCR.use_cassette 'airconditioner' do
-      @ac = AirConditioner.new(ENV['LIEBERT_AIRCONDITIONER_URI'])
-    end
+    @ac = AirConditioner.new(ENV['LIEBERT_AIRCONDITIONER_URI'])
   end
 
   it 'responds to temperature' do
@@ -12,10 +12,10 @@ describe AirConditioner do
   end
 
   it 'responds to humidity' do
-    expect(@ac.humidity).to eq "Humidity\t48.0"
+    expect(@ac.humidity).to eq "Humidity\t47.0"
   end
 
   it 'responds to all' do
-    expect(@ac.all).to eq "Temperature\t65.0\nHumidity\t48.0\n"
+    expect(@ac.all).to eq "Temperature\t65.0\nHumidity\t47.0\n"
   end
 end

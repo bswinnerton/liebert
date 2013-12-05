@@ -6,13 +6,9 @@ class AirConditioner
 
   include Scrapable
 
-  def initialize(endpoint_uri)
+  def initialize(endpoint_uri = nil)
     @endpoint_uri = endpoint_uri
-
     create_getters
-    if get_webpage
-      ATTRS.each { |attr| eval "scrape_#{attr}" }
-    end
   end
 
   def scrape_temperature
