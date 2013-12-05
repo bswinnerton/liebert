@@ -1,6 +1,6 @@
 # Liebert
 
-TODO: Write a gem description
+Liebert is a gem that allows you to gather metrics from Liebert based products and display them in a format digestable by Ganglia.
 
 ## Installation
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To utilize this gem, simply set the URLs to your liebert products in environment variables:
+
+AC Unit:  
+```
+export LIEBERT_AIRCONDITIONER_URI='http://liebertac.mydomain.com/graphic/env.htm'
+```
+
+UPS Unit:  
+```
+export LIEBERT_UPS_URI='http://liebertups.mydomain.com/graphic/smallUps.htm'
+```
 
 ## Contributing
 
