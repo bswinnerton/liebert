@@ -1,0 +1,10 @@
+require 'liebert'
+
+case ARGV[0]
+when 'ac'
+  ac = AirConditioner.new(ENV['LIEBERT_AIRCONDITIONER_URI'])
+  pass_arguments(ac)
+when 'ups'
+  ups = UPS.new(ENV['LIEBERT_UPS_URI'])
+  pass_arguments(ups)
+end

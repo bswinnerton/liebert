@@ -1,0 +1,175 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: <AIRCONDITIONER_URI>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 26 Oct 1995 00:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Allegro-Software-RomPager/4.30
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head>
+        <link rel="stylesheet" type="text/css" href="../rightPanelStyle.css">
+        <link rel="stylesheet" type="text/css" href="../powerFlowStyle.css">
+        <style type="text/css">
+        .areaTitleStyle { font-size:12px; }
+        .defaultTableStyle { font-size:9px;}
+        .graphTableFont { font-size:9px; color:blue; }
+        .blueTextStyle { font-size:12px; color:blue; }
+        .blackTextStyle { font-size:12px; color:black; }
+        .grayTextStyle { font-size:12px; color:gray; }
+        .rightAlignAreaStyle { font-size:14px; color:black; font-weight:bold; text-align:right; }
+        .leftAlignAreaStyle { font-size:14px; color:black; font-weight:bold; text-align:left; }
+
+        .identPanelArea             { background:#31659c; position: absolute; visibility: visible; top: 0px; left: 0px; }
+        .alarmPanelArea             { background:#31659c; position: absolute; visibility: visible; top: 270px; left: 0px; }
+
+        .temperatureFrame           {position: absolute; visibility: visible; top: 35px; left: 5px; z-index: 1; }
+        .humidityFrame              {position: absolute; visibility: visible; top: 150px; left: 5px; z-index: 1; }
+        .temperatureArea            {position: absolute; visibility: visible; top: 45px; left: 15px; z-index: 1; }
+        .temperatureGraphAreaMinus  {position: absolute; visibility: hidden; top: 63px; left: 172px; z-index: 1; }
+        .temperatureGraphAreaSpt    {position: absolute; visibility: hidden; top: 60px; left: 220px; z-index: 1; }
+        .temperatureGraphAreaPlus   {position: absolute; visibility: hidden; top: 63px; left: 270px; z-index: 1; }
+        .temperatureGraph           {position: absolute; visibility: hidden; top: 82px; left: 150px; z-index: 2; }
+        .temperatureBar             {position: absolute; visibility: hidden; top: 82px; left: 150px; z-index: 1; }
+        .temperatureBarOTLow        {position: absolute; visibility: hidden; top: 82px; left: 150px; z-index: 1; }
+        .temperatureBarOTHigh       {position: absolute; visibility: hidden; top: 82px; left: 280px; z-index: 1; }
+
+        .stageInfoArea              {position: absolute; visibility: visible; top: 60px; left: 510px; z-index: 1; }
+
+        .humidityArea               {position: absolute; visibility: visible; top: 160px; left: 30px; z-index: 1; }
+        .humidityGraphAreaMinus     {position: absolute; visibility: hidden; top: 183px; left: 172px; z-index: 1; }
+        .humidityGraphAreaSpt       {position: absolute; visibility: hidden; top: 180px; left: 220px; z-index: 1; }
+        .humidityGraphAreaPlus      {position: absolute; visibility: hidden; top: 183px; left: 270px; z-index: 1; }
+        .humidityGraph              {position: absolute; visibility: hidden; top: 200px; left: 150px; z-index: 2; }
+        .humidityBar                {position: absolute; visibility: hidden; top: 200px; left: 150px; z-index: 1; }
+        .humidityBarOTLow           {position: absolute; visibility: hidden; top: 200px; left: 150px; z-index: 1; }
+        .humidityBarOTHigh          {position: absolute; visibility: hidden; top: 200px; left: 280px; z-index: 1; }
+
+        .temperatureSetpointRow     { visibility: hidden }
+        .temperatureToleranceRow    { visibility: hidden }
+
+        .humiditySetpointRow        { visibility: hidden }
+        .humidityToleranceRow       { visibility: hidden }
+
+        .deviceCooling              {position: absolute; visibility: hidden; top: 45px; left: 320px; z-index: 10; }
+        .deviceHeating              {position: absolute; visibility: hidden; top: 45px; left: 400px; z-index: 10; }
+
+        .deviceHumidify             {position: absolute; visibility: hidden; top: 160px; left: 320px; z-index: 10; }
+        .deviceDehumidify           {position: absolute; visibility: hidden; top: 160px; left: 400px; z-index: 10; }
+
+        .deviceEconCycle            {position: absolute; visibility: hidden; top: 160px; left: 500px; z-index: 10; }
+        .deviceUnitOn               {position: absolute; visibility: hidden; top: 160px; left: 580px; z-index: 10; }
+
+        </style>
+        <meta name="Pragma" content="no-cache">
+        <meta name="generator" content="Liebert Corporation 2000-2010">
+        <meta http-equiv="refresh" content="30;URL=../graphic/env.htm">
+        <base target="detailArea">
+        </head><script language="JavaScript" type="text/javascript" src="../genPurpose_js.js"></script>
+        <script language="JavaScript" type="text/javascript">
+        <!--
+        // Assign deviceInfo defaults:
+        var deviceInfo = new Object();
+
+        deviceInfo.type="LAM";
+        deviceInfo.moduleId="1";
+
+        var tempScales = new Array
+        (
+            "F",
+            "C"
+        );
+
+
+        deviceInfo.type="LMD_UNIT_AMAG";
+
+        deviceInfo.cooling=true;
+        deviceInfo.heating=false;
+
+        deviceInfo.humidify=false;
+        deviceInfo.dehumidify=true;
+
+        deviceInfo.econCycle=false;
+        deviceInfo.unitOn=true;
+
+        deviceInfo.tempUnit=0;
+        deviceInfo.temp=65;
+        deviceInfo.tempSetpt=65;
+        deviceInfo.tempTol=2.0;
+
+        deviceInfo.humid=48;
+        deviceInfo.humidSetpt=48;
+        deviceInfo.humidTol=5;
+        // -->
+        </script>
+        <script language="JavaScript" type="text/javascript" src="env_js.js"></script>
+        <script language="JavaScript" type="text/javascript" src="../dateTime_js.js"></script>
+        </head><body bgcolor="#FFFFFF" onLoad="initPage();" class="defaultTableStyle">
+        <div id="IdentPanelArea" class="identPanelArea">
+            <table border="0" width="660" height="30">
+                <tr>
+                    <td class="headerTextStyle" width="250">Summary:</td><td class="headerTextStyle"><nobr>Updated:&nbsp;<script>document.write(condensedDateTimeString(new Date()));</script></nobr></td></tr></table></div><div id="TemperatureFrame" class="temperatureFrame">
+            <table border="1" width="655" height="110">
+                <tr><td>&nbsp;</td></tr></table></div><div id="TemperatureArea" class="temperatureArea">
+            <table border="0" height="90">
+                <tr>
+                    <td class="blueTextStyle">Temperature</td><td class="blueTextStyle"><script>document.write(deviceInfo.temp);</script></td><td class="blueTextStyle"><script>document.write(tempScales[deviceInfo.tempUnit]);</script></td></tr><tr  id="TemperatureSetpointRow" class="temperatureSetpointRow">
+                    <td align=left class="blackTextStyle">Setpoint</td><td class="blackTextStyle"><script>document.write(deviceInfo.tempSetpt);</script></td><td>&nbsp;</td></tr><tr id="TemperatureToleranceRow" class="temperatureToleranceRow">
+                    <td class="grayTextStyle">Tolerance</td><td class="grayTextStyle"><script>document.write(deviceInfo.tempTol);</script></td><td>&nbsp;</td></tr></table></div><div id="TemperatureGraphAreaMinus" class="temperatureGraphAreaMinus">
+            <table border="0" class="graphTableFont">
+                <tr><td>-<script>document.write(deviceInfo.tempTol);</script></td></tr></table></div><div id="TemperatureGraphAreaSpt" class="temperatureGraphAreaSpt">
+            <table border="0" class="graphTableFont">
+                <tr><td><b><script>document.write(deviceInfo.tempSetpt);</script></b></td></tr></table></div><div id="TemperatureGraphAreaPlus" class="temperatureGraphAreaPlus">
+            <table border="0" class="graphTableFont">
+                <tr><td>+<script>document.write(deviceInfo.tempTol);</script></td></tr></table></div><div id="TemperatureGraph" class="temperatureGraph"><img width=160 height=16 src="./images/graphBG.gif"></div><div id="TemperatureBar" class="temperatureBar"><img id="TemperatureBarImg" width="1" height="16" src="./images/graphBar.gif"></div><div id="TemperatureBarOTLow" class="temperatureBarOTLow"><img id="TemperatureBarOTLowImg" width="30" height="16" src="./images/marginal.gif"></div><div id="TemperatureBarOTHigh" class="temperatureBarOTHigh"><img id="TemperatureBarOTHighImg" width="30" height="16" src="./images/marginal.gif"></div><div id="StageInfoArea" class="stageInfoArea">
+            <table border="0">
+                <tr>
+                    <td class="leftAlignAreaStyle">Stage</td><td class="leftAlignAreaStyle">
+                         0                            </td></tr><tr>
+                    <td class="leftAlignAreaStyle">Capacity&nbsp;</td><td class="leftAlignAreaStyle">
+                         30                %
+                    </td></tr></table></div><div id="HumidityFrame" class="humidityFrame">
+            <table border="1" width="485" height="110">
+                <tr><td>&nbsp;</td></tr></table></div><div id="HumidityArea" class="humidityArea">
+            <table border="0" height="90">
+                <tr>
+                    <td align=right class="blueTextStyle">Humidity</td><td class="blueTextStyle"><script>document.write(deviceInfo.humid);</script></td><td align=left class="blueTextStyle">%</td></tr><tr id="HumiditySetpointRow" class="humiditySetpointRow">
+                    <td align=right class="blackTextStyle">Setpoint</td><td class="blackTextStyle"><script>document.write(deviceInfo.humidSetpt);</script></td><td>&nbsp;</td></tr><tr id="HumidityToleranceRow" class="humidityToleranceRow">
+                    <td align=right class="grayTextStyle">Tolerance</td><td class="grayTextStyle"><script>document.write(deviceInfo.humidTol);</script></td><td>&nbsp;</td></tr></table></div><div id="HumidityGraphAreaMinus" class="humidityGraphAreaMinus">
+            <table border="0" class="graphTableFont">
+                <tr><td>-<script>document.write(deviceInfo.humidTol);</script></td></tr></table></div><div id="HumidityGraphAreaSpt" class="humidityGraphAreaSpt">
+            <table border="0" class="graphTableFont">
+                <tr><td><b><script>document.write(deviceInfo.humidSetpt);</script></b></td></tr></table></div><div id="HumidityGraphAreaPlus" class="humidityGraphAreaPlus">
+            <table border="0" class="graphTableFont">
+                <tr><td>+<script>document.write(deviceInfo.humidTol);</script></td></tr></table></div><div id="HumidityGraph" class="humidityGraph"><img width=160 height=16 src="./images/graphBG.gif"></div><div id="HumidityBar" class="humidityBar"><img id="HumidityBarImg" width="1" height="16" src="./images/graphBar.gif"></div><div id="HumidityBarOTLow" class="humidityBarOTLow"><img id="HumidityBarOTLowImg" width="30" height="16" src="./images/marginal.gif"></div><div id="HumidityBarOTHigh" class="humidityBarOTHigh"><img id="HumidityBarOTHighImg" width="30" height="16" src="./images/marginal.gif"></div><div id="Cooling" class="deviceCooling"><img src="./images/cooling.gif"></div><div id="Heating" class="deviceHeating"><img src="./images/heating.gif"></div><div id="Humidify" class="deviceHumidify"><img src="./images/humidify.gif"></div><div id="Dehumidify" class="deviceDehumidify"><img src="./images/dehumidify.gif"></div><div id="EconCycle" class="deviceEconCycle"><img src="./images/econCycle.gif"></div><div id="UnitOn" class="deviceUnitOn"><img src="./images/unitOn.gif"></div><div id="AlarmPanelArea" class="alarmPanelArea">
+            <table border="0" width="660" height="30">
+                <tr>
+                    <td class="headerTextStyle" width="250">Active Alarms:</td></tr></table></div>
+        </body></html>
+    http_version: 
+  recorded_at: Thu, 05 Dec 2013 17:09:54 GMT
+recorded_with: VCR 2.8.0
