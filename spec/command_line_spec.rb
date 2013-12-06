@@ -8,6 +8,6 @@ describe 'Command Line' do
 
   it 'should respond when parameters are passed' do
     command_line = `liebert ups --charge`
-    expect(command_line).to include "Charge\t"
+    expect(command_line).to match /(\d.*)/
   end
 end

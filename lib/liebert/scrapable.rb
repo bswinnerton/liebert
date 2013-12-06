@@ -20,7 +20,7 @@ module Scrapable
         define_method(method_name) do
           get_webpage
           eval("scrape_#{method_name}")
-          "#{method_name.capitalize}\t#{eval("@#{method_name}")}"
+          eval("@#{method_name}")
         end
       end
     end

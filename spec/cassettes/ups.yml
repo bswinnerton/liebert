@@ -208,7 +208,7 @@ http_interactions:
                     <td>Volts:</td><td></td><td><script language="JavaScript" type="text/javascript">if(deviceInfo.numBypassLines <= 1)document.write("V");</script>
                     </td><td></td><td class="unitColumnStyle"><script language="JavaScript" type="text/javascript">if(deviceInfo.numBypassLines >= 3)document.write("V");</script></td></tr><tr id="BypassAmps" class="bypassAmps">
                     <td>Amps:</td><td></td><td class="unitColumnStyle">A</td></tr><tr>
-                    <td>Freq:</td><td>59.9</td><td class="unitColumnStyle">Hz</td></tr></table></center></td></tr></table></div><div id="Input" class="upsInputArea">
+                    <td>Freq:</td><td>60.0</td><td class="unitColumnStyle">Hz</td></tr></table></center></td></tr></table></div><div id="Input" class="upsInputArea">
             <table border="1">
               <tr><td><center>
                 <a href="../monitor/upsInput.htm"><b>INPUT</b></a><table border="0" width="135" align=center cellspacing="0" cellpadding="1">
@@ -223,13 +223,13 @@ http_interactions:
                   <tr>
                     <td>Volts:</td><td></td><td><script language="JavaScript" type="text/javascript">if(deviceInfo.numOutputLines <= 1)document.write("V");</script>
                         </td><td></td><td class="unitColumnStyle"><script language="JavaScript" type="text/javascript">if(deviceInfo.numOutputLines >= 3)document.write("V");</script></td></tr><tr id="OutputAmps" class="outputAmps">
-                    <td>Amps:</td><td>33.3            </td><td class="unitColumnStyle">A</td></tr><tr id="OutputFreq" class="outputFreq">
-                    <td>Freq:</td><td>59.9            </td><td class="unitColumnStyle">Hz</td></tr></table></center></td></tr></table></div><div id="Battery" class="upsBatteryArea">
+                    <td>Amps:</td><td>33.6            </td><td class="unitColumnStyle">A</td></tr><tr id="OutputFreq" class="outputFreq">
+                    <td>Freq:</td><td>60.0            </td><td class="unitColumnStyle">Hz</td></tr></table></center></td></tr></table></div><div id="Battery" class="upsBatteryArea">
             <table border="1">
               <tr><td><center>
                 <a href="../monitor/upsBattery.htm"><b>BATTERY</b></a><table border="0" width="110" align=center cellspacing="0" cellpadding="1">
                   <tr>
-                    <td>Volts:</td><td>548            </td><td class="unitColumnStyle">V</td></tr><tr id="BatteryAmps" class="batteryAmps">
+                    <td>Volts:</td><td>547            </td><td class="unitColumnStyle">V</td></tr><tr id="BatteryAmps" class="batteryAmps">
                     <td>Amp:</td><td>0.0            </td><td class="unitColumnStyle">A</td></tr><tr>
                     <td>Charge:</td><td>100            </td><td class="unitColumnStyle">%</td></tr><tr>
                     <td><nobr>Time Remaining:</nobr></td><td>&nbsp;            </td><td class="unitColumnStyle">min</td></tr></table></center></td></tr></table></div><div id="AlarmPanelArea" class="alarmPanelArea">
@@ -269,5 +269,5 @@ http_interactions:
 
         </body></html>
     http_version: 
-  recorded_at: Fri, 06 Dec 2013 16:15:19 GMT
+  recorded_at: Fri, 06 Dec 2013 20:39:52 GMT
 recorded_with: VCR 2.8.0
