@@ -1,4 +1,6 @@
 # Liebert
+[![Build Status](https://travis-ci.org/bswinnerton/liebert.png)](https://travis-ci.org/bswinnerton/liebert)
+[![Code Climate](https://codeclimate.com/github/bswinnerton/liebert.png)](https://codeclimate.com/github/bswinnerton/liebert)
 
 Liebert is a gem that allows you to gather metrics from [Liebert](http://www.emersonnetworkpower.com/en-US/Brands/liebert/Pages/default.aspx) based products and display them in a format digestable by [Ganglia](http://ganglia.sourceforge.net/).
 
