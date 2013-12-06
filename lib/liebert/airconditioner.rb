@@ -6,8 +6,8 @@ class AirConditioner
 
   include Scrapable
 
-  def initialize(endpoint_uri = nil)
-    @endpoint_uri = endpoint_uri
+  def initialize(hostname = nil)
+    @endpoint_uri = "http://#{hostname}/graphic/env.htm" unless hostname.nil?
     create_getters
   end
 

@@ -24,12 +24,12 @@ To utilize this gem, simply set the URLs to your liebert products in environment
 
 AC Unit:  
 ```
-export LIEBERT_AIRCONDITIONER_URI='http://liebertac.mydomain.com/graphic/env.htm'
+export LIEBERT_AIRCONDITIONER_HOSTNAME='liebertac.mydomain.com'
 ```
 
 UPS Unit:  
 ```
-export LIEBERT_UPS_URI='http://liebertups.mydomain.com/graphic/smallUps.htm'
+export LIEBERT_UPS_HOSTNAME='liebertups.mydomain.com'
 ```
 
 And then you can run:

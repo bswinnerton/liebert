@@ -6,8 +6,8 @@ class UPS
 
   include Scrapable
 
-  def initialize(endpoint_uri = nil)
-    @endpoint_uri = endpoint_uri
+  def initialize(hostname = nil)
+    @endpoint_uri = "http://#{hostname}/graphic/smallUps.htm" unless hostname.nil?
     create_getters
   end
 

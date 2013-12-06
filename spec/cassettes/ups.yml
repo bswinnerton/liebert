@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: <UPS_URI>
+    uri: http://liebert1.bobst.nyu.edu/graphic/smallUps.htm
     body:
       encoding: US-ASCII
       string: ''
@@ -216,7 +216,7 @@ http_interactions:
                     <td>Volts:</td><td></td><td><script language="JavaScript" type="text/javascript">if(deviceInfo.numInputLines <= 1)document.write("V");</script>
                     </td><td></td><td class="unitColumnStyle"><script language="JavaScript" type="text/javascript">if(deviceInfo.numInputLines >= 3)document.write("V");</script></td></tr><tr id="InputAmps" class="inputAmps">
                     <td>Amps:</td><td>16.4            </td><td class="unitColumnStyle">A</td></tr><tr>
-                    <td>Freq:</td><td>60.1            </td><td class="unitColumnStyle">Hz</td></tr></table></center></td></tr></table></div><div id="Output" class="upsOutputArea">
+                    <td>Freq:</td><td>60.0            </td><td class="unitColumnStyle">Hz</td></tr></table></center></td></tr></table></div><div id="Output" class="upsOutputArea">
             <table border="1">
               <tr><td><center>
                 <a href="../monitor/upsOutput.htm"><b>OUTPUT</b></a><table border="0" width="135" align=center cellspacing="0" cellpadding="1">
@@ -269,5 +269,5 @@ http_interactions:
 
         </body></html>
     http_version: 
-  recorded_at: Thu, 05 Dec 2013 21:26:30 GMT
+  recorded_at: Fri, 06 Dec 2013 16:15:19 GMT
 recorded_with: VCR 2.8.0

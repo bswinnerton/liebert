@@ -4,7 +4,7 @@ vcr_options = { cassette_name: 'ups' }
 
 describe UPS, vcr: vcr_options do
   before :all do
-    @ups = UPS.new(ENV['LIEBERT_UPS_URI'])
+    @ups = UPS.new(ENV['LIEBERT_UPS_HOSTNAME'])
   end
 
   it 'responds to input_amps' do

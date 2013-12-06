@@ -32,7 +32,7 @@ module Scrapable
         response = RestClient.get(self.endpoint_uri)
         @parsed_response = Nokogiri::HTML.parse(response.body)
       rescue
-        raise "You forgot to set the URL to your Liebert unit. More information can be found here: https://github.com/bswinnerton/liebert/blob/master/README.md"
+        raise "You forgot to set the hostname to your Liebert unit. More information can be found here: https://github.com/bswinnerton/liebert/blob/master/README.md"
       end
     end
     @parsed_response

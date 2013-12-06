@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: <AIRCONDITIONER_URI>
+    uri: http://liebertac1.bobst.nyu.edu/graphic/env.htm
     body:
       encoding: US-ASCII
       string: ''
@@ -121,7 +121,7 @@ http_interactions:
         deviceInfo.tempSetpt=65;
         deviceInfo.tempTol=2.0;
 
-        deviceInfo.humid=47;
+        deviceInfo.humid=43;
         deviceInfo.humidSetpt=48;
         deviceInfo.humidTol=5;
         // -->
@@ -151,7 +151,7 @@ http_interactions:
                     <td class="leftAlignAreaStyle">Stage</td><td class="leftAlignAreaStyle">
                          0                            </td></tr><tr>
                     <td class="leftAlignAreaStyle">Capacity&nbsp;</td><td class="leftAlignAreaStyle">
-                         13                %
+                         10                %
                     </td></tr></table></div><div id="HumidityFrame" class="humidityFrame">
             <table border="1" width="485" height="110">
                 <tr><td>&nbsp;</td></tr></table></div><div id="HumidityArea" class="humidityArea">
@@ -171,5 +171,5 @@ http_interactions:
                     <td class="headerTextStyle" width="250">Active Alarms:</td></tr></table></div>
         </body></html>
     http_version: 
-  recorded_at: Thu, 05 Dec 2013 21:26:29 GMT
+  recorded_at: Fri, 06 Dec 2013 16:15:19 GMT
 recorded_with: VCR 2.8.0
