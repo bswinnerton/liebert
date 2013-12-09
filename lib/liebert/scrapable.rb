@@ -31,8 +31,12 @@ module Scrapable
       begin
         response = RestClient.get(self.endpoint_uri)
         @parsed_response = Nokogiri::HTML.parse(response.body)
-      rescue
-        raise "You forgot to set the hostname to your Liebert unit. More information can be found here: https://github.com/bswinnerton/liebert/blob/master/README.md"
+      rescue ArgumentError
+        raise 'You forgot to set the hostname to your Liebert unit. More information can be found here: https://github.com/bswinnerton/liebert/blob/master/README.md'
+      rescue URI::InvalidURIError
+        raise  'You\'ve set an invalid hostname in your environemnt variable'
+      rescue SocketError
+        raise "Unable to contact liebert unit at #{self.endpoint_uri}"
       end
     end
     @parsed_response
