@@ -1,21 +1,20 @@
 require_relative 'scrapable'
 
 class AirConditioner
-  attr_accessor :endpoint_uri
-  ATTRS = %i(temperature humidity)
-
   include Scrapable
 
-  def initialize(hostname = nil)
-    @endpoint_uri = "http://#{hostname}/graphic/env.htm" unless hostname.nil?
-    create_getters
+  def initialize(hostname)
+    #@endpoint_uri = "http://#{hostname}/graphic/env.htm" unless hostname.nil?
   end
 
-  def scrape_temperature
-    @temperature = @parsed_response.xpath('/*/script[2]').children.text.match(/deviceInfo\.temp=(\d.*);/)[1].to_f
-  end
+  scrapes_for :temperature, :humidity, from: "http://liebertac1.bobst.nyu.edu/graphic/env.htm"
 
-  def scrape_humidity
-    @humidity = @parsed_response.xpath('/*/script[2]').children.text.match(/deviceInfo\.humid=(\d.*);/)[1].to_f
+  def scrape_attribute(attr, response)
+    case attr
+    when 'temperature'
+      response.xpath('/*/script[2]').children.text.match(/deviceInfo\.temp=(\d.*);/)[1].to_f
+    when 'humidity'
+      response.xpath('/*/script[2]').children.text.match(/deviceInfo\.humid=(\d.*);/)[1].to_f
+    end
   end
 end
